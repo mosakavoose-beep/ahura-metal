@@ -110,5 +110,32 @@ footer{text-align:center;padding:25px;color:#c7a34b;background:#080808;font-size
 <p>© AHOURA METAL</p>
 </footer>
 
+<section dir="rtl" style="padding:25px;background:#171717;color:#fff;border-radius:15px;margin:20px auto;max-width:600px">
+<h2>ثبت سفارش اهورامتال</h2>
+<p>اصالت، درخشش، سرمایه</p>
+<label>نام و نام خانوادگی</label>
+<input id="customer" placeholder="نام شما" style="display:block;width:95%;padding:12px;margin:10px 0">
+<label>نام محصول</label>
+<input id="product" placeholder="مثلاً انگشتر نقره" style="display:block;width:95%;padding:12px;margin:10px 0">
+<label>وزن یا تعداد</label>
+<input id="weight" placeholder="وزن یا تعداد" style="display:block;width:95%;padding:12px;margin:10px 0">
+<label>شماره تماس</label>
+<input id="phone" placeholder="شماره تماس شما" style="display:block;width:95%;padding:12px;margin:10px 0">
+<button onclick="sendOrder()" style="background:#c9a44c;color:#171717;padding:14px;border:0;border-radius:8px;width:100%;font-size:17px">
+ارسال سفارش در واتساپ
+</button>
+</section>
+<script>
+function sendOrder(){
+const c=document.getElementById('customer').value;
+const p=document.getElementById('product').value;
+const w=document.getElementById('weight').value;
+const ph=document.getElementById('phone').value;
+if(!c||!p||!ph){alert("لطفاً اطلاعات ضروری را تکمیل کنید");return;}
+const msg="سفارش اهورامتال\nنام: "+c+"\nمحصول: "+p+"\nوزن: "+w+"\nتلفن: "+ph;
+window.open("https://wa.me/989337282291?text="+encodeURIComponent(msg),"_blank");
+}
+</script>
+
 </body>
 </html>
