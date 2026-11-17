@@ -25,7 +25,7 @@ nav a{color:#e4c66e;text-decoration:none;font-size:14px}
 .category h3,.product h3{color:#e4c66e}
 .product p{color:#ccc;font-size:13px;line-height:2}
 .price{color:#e4c66e;font-weight:bold}
-.order{display:inline-block;color:#111;background:#c7a34b;padding:10px 15px;border-radius:5px;text-decoration:none;font-size:13px}
+.order{display:inline-block;color:#111;background:#c7a34b;padding:10px 15px;border-radius:5px;text-decoration:none;font-size:13px;margin-top:12px}
 .about{background:#191919;line-height:2.3;padding:35px 22px;text-align:center}
 footer{text-align:center;padding:25px;color:#c7a34b;background:#080808;font-size:13px;line-height:2}
 </style>
@@ -76,24 +76,28 @@ footer{text-align:center;padding:25px;color:#c7a34b;background:#080808;font-size
 <section class="section" id="products">
 <h2>محصولات منتخب</h2>
 <div class="products">
+
 <div class="product">
 <h3>محصول طلایی</h3>
 <p>محصولات خاص و ارزشمند طلا</p>
 <div class="price">قیمت: استعلام روز</div>
-<a class="order" href="#contact">سفارش محصول</a>
+<a class="order" href="https://wa.me/989177280250" target="_blank">سفارش محصول</a>
 </div>
+
 <div class="product">
 <h3>محصول نقره</h3>
 <p>زیبایی و ظرافت در نقره</p>
 <div class="price">قیمت: استعلام روز</div>
-<a class="order" href="#contact">سفارش محصول</a>
+<a class="order" href="https://wa.me/989177280250" target="_blank">سفارش محصول</a>
 </div>
+
 <div class="product">
 <h3>محصول مسی</h3>
 <p>هنر و اصالت در محصولات مسی</p>
 <div class="price">قیمت: استعلام روز</div>
-<a class="order" href="#contact">سفارش محصول</a>
+<a class="order" href="https://wa.me/989177280250" target="_blank">سفارش محصول</a>
 </div>
+
 </div>
 </section>
 
@@ -104,8 +108,7 @@ footer{text-align:center;padding:25px;color:#c7a34b;background:#080808;font-size
 </section>
 
 <footer id="contact">
-<h3>ارتباط با اهورامتال</h3>برای ثبت سفارش، می‌توانید از طریق واتساپ یا بخش سفارش آنلاین فروشگاه با ما در ارتباط باشید.»
-
+<h3>ارتباط با اهورامتال</h3>
 <p>برای ثبت سفارش و دریافت اطلاعات محصولات با ما تماس بگیرید.</p>
 <p>شماره تماس و شبکه‌های اجتماعی به‌زودی اضافه می‌شوند.</p>
 <p>© AHOURA METAL</p>
@@ -114,26 +117,38 @@ footer{text-align:center;padding:25px;color:#c7a34b;background:#080808;font-size
 <section dir="rtl" style="padding:25px;background:#171717;color:#fff;border-radius:15px;margin:20px auto;max-width:600px">
 <h2>ثبت سفارش اهورامتال</h2>
 <p>اصالت، درخشش، سرمایه</p>
+
 <label>نام و نام خانوادگی</label>
 <input id="customer" placeholder="نام شما" style="display:block;width:95%;padding:12px;margin:10px 0">
+
 <label>نام محصول</label>
 <input id="product" placeholder="مثلاً انگشتر نقره" style="display:block;width:95%;padding:12px;margin:10px 0">
+
 <label>وزن یا تعداد</label>
 <input id="weight" placeholder="وزن یا تعداد" style="display:block;width:95%;padding:12px;margin:10px 0">
+
 <label>شماره تماس</label>
 <input id="phone" placeholder="شماره تماس شما" style="display:block;width:95%;padding:12px;margin:10px 0">
+
 <button onclick="sendOrder()" style="background:#c9a44c;color:#171717;padding:14px;border:0;border-radius:8px;width:100%;font-size:17px">
 ارسال سفارش در واتساپ
 </button>
 </section>
+
 <script>
 function sendOrder(){
 const c=document.getElementById('customer').value;
 const p=document.getElementById('product').value;
 const w=document.getElementById('weight').value;
 const ph=document.getElementById('phone').value;
-if(!c||!p||!ph){alert("لطفاً اطلاعات ضروری را تکمیل کنید");return;}
+
+if(!c||!p||!ph){
+alert("لطفاً اطلاعات ضروری را تکمیل کنید");
+return;
+}
+
 const msg="سفارش اهورامتال\nنام: "+c+"\nمحصول: "+p+"\nوزن: "+w+"\nتلفن: "+ph;
+
 window.open("https://wa.me/989337282291?text="+encodeURIComponent(msg),"_blank");
 }
 </script>
